@@ -1,0 +1,16 @@
+[global]
+ioengine=sync
+;ioengine=libaio ;Linux Async IO
+numjobs=1
+bs=4K
+size=4G
+rw=write
+zonemode=zbd
+zonesize=128M
+direct=1
+write_iops_log=./zns_global
+write_bw_log=./zns_global
+write_lat_log=./zns_global
+
+[192k_write_qd4_w4]
+filename=/dev/nvme0n1
